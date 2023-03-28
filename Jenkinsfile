@@ -46,7 +46,7 @@ pipeline {
             
             steps {
                 dir ('tasks-frontend') {
-                    git branch: 'main', credentialsId: 'github_jenkins', url: 'https://github.com/ajoaquim/tasks-frontend'
+                    git branch: 'master', credentialsId: 'github_jenkins', url: 'https://github.com/ajoaquim/tasks-frontend'
                     bat 'mvn clean package'
                     deploy adapters: [tomcat8(credentialsId: 'TomcatLogin', path: '', url: 'http://localhost:8001')], contextPath: 'tasks', onFailure: false, war: 'target/tasks.war'    
                 }
