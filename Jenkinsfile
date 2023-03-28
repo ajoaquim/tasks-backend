@@ -54,5 +54,15 @@ pipeline {
             
 
         }
+        stage ('FUNCIONAIS TESTS') {
+            
+            steps {
+                dir ('funcionais-tests') {
+                    git branch: 'main', credentialsId: 'github_jenkins', url: 'https://github.com/ajoaquim/tasks-funcionais-test'
+                    bat 'mvn test'
+                }
+            }
+            
+        }
     }
 }
