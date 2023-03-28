@@ -32,6 +32,16 @@ pipeline {
             }
             
         }
+        stage ('API TESTS') {
+            
+            steps {
+                git branch: 'main', credentialsId: 'github_jenkins', url: 'https://github.com/ajoaquim/tasks-api-test'
+                bat 'mvn test'
+            }
+            
+        }
+        
+
        
     }
 }
