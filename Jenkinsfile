@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         stage ('just test') {
-            step {
+            steps {
                bat 'echo teste' 
             }
             
