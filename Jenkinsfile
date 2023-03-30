@@ -72,5 +72,6 @@ pipeline {
                 bat 'docker-compose up -d'
                
             }
+        }
     }
 }
