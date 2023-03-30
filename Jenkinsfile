@@ -64,5 +64,13 @@ pipeline {
             }
             
         }
+        stage ('FDEPLOY DE PRODUCAO') {
+            
+            steps {
+                                  
+                bat 'docker-compose build'
+                bat 'docker-compose up -d'
+               
+            }
     }
 }
