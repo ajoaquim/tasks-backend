@@ -64,7 +64,7 @@ pipeline {
             }
             
         }
-        stage ('FDEPLOY DE PRODUCAO') {
+        stage ('DEPLOY DE PRODUCAO') {
             
             steps {
                                   
